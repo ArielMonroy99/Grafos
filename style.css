@@ -35,8 +35,9 @@
       }
 
       #mynetwork {
+        margin: 2.5%;
         width: 95%;
-        height: 800px;
+        height: 59%;
         border: 1px solid lightgray;
       }
 /* ------------ */
@@ -96,7 +97,7 @@ body{
     width: 100%;
     max-width: 100%;
     position: absolute;
-    top:40%;
+    top:36%;
     z-index: 1;
  }
 .caption h1{
@@ -277,9 +278,32 @@ input:checked + .slider:before{
   .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
     transform: scale3d(1, 1, 1);
   }
+
   /*.img1{
       position: fixed;
       padding: 30;
       height: 10;
       width: 10;
   }*/
+
+    /*----------------*/
+
+    #hmire{
+      color:darkslateblue;
+      font-weight: bolder;
+      font-size: 25px;
+  }
+  #cmire{
+      text-align: left;
+      color: #000;
+      text-transform:initial;
+      margin: 100px;
+      background-color: transparent 80%;
+  }
+  .img2{
+      align-self: center;
+      margin-bottom: 25px;
+  }
+  .font-weight-light{
+    color: black;
+  }

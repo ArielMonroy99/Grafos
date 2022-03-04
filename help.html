@@ -54,10 +54,10 @@
                         <a class="navbar-brand" href="#">GRAFO</a>
                       </li>
                     <li class="nav-item1">
-                      <a class="nav-link active" aria-current="page">Home</a>
+                      <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="help.html">Help</a>
+                      <a class="nav-link active" href="help.html">Help</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">Contáctanos</a>
@@ -84,104 +84,56 @@
             <input type="checkbox">
             <span class="slider round" onclick="toggle()"></span>
         </label>
-    </div>
-      
-
-    <p>
-    </p>
-
-    
-    <table class="view">
-      <colgroup>
-        <col width="75%" />
-      </colgroup>
-      <tr>
-        <td>
-          
-          <div class="grafo" id="mynetwork"></div>
-        </td>
-      </tr>
-    </table>
-
-
-    <div class="container oy-5">
-        <div class="row text center">
-            <button onclick="construirTabla()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Matriz 
-              </button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="card" id="cmire">
+            <div class="card-header" id="hmire">
+                Crear un nuevo Nodo
+            </div>
+            <div class="card-body" id="bmire">
+                <blockquote class="blockquote mb-0">
+                    <p class="font-weight-light">Si se desea crear un nuevo nodo o vértice  se debe hacer click dentro del recuadro, a continuación le aparecera una ventana donde debe ingresar el nombre o identificador.</p>
+                </blockquote>
+            </div>
+            <div class="img2" id="cmire">
+                <img src="primer.png">
+            </div>
         </div>
-    </div>
-    <!-- Script -->
-    <script>
-        function toggle(){
-            var a = document.getElementById("style1");
-            a.x = 'style2' == a.x ? 'style': 'style2';
-            a.href = a.x + '.css';
-        }
-    </script>
+        <div class="card" id="cmire">
+            <div class="card-header" id="hmire">
+                Crear una nueva Arista
+            </div>
+            <div class="card-body" id="bmire">
+                <blockquote class="blockquote mb-0">
+                    <p class="font-weight-light">Para crear una nueva arista se debe hacer click dento del nodo del cual saldra la arista y otro click dentro del nodo al cual lleva la arista, a continuación le aparecera una ventana donde debe ingresar el peso o valor de la arista.</p>
+                </blockquote>
+            </div>
+            <div class="img2">
+                <img src="second.png">
+            </div>
+        </div>
+        <div class="card" id="cmire">
+            <div class="card-header" id="hmire">
+                Generar Matriz de Adyacencia
+            </div>
+            <div class="card-body" id="bmire">
+                <blockquote class="blockquote mb-0">
+                    <p class="font-weight-light"> Para generar la matriz de adyacencia se debe hacer click en el boton "Matriz" y a continuación se desplegará por la parte inferior de la ventana la matriz correstondiente al grafo.</p>
+                </blockquote>
+            </div>
+            <div class="img2">
+                <img src="matriz.png">
+            </div>
+        </div>
+        <!-- Script -->
+        <script>
+            function toggle(){
+                var a = document.getElementById("style1");
+                a.x = 'style2' == a.x ? 'style': 'style2';
+                a.href = a.x + '.css';
+            }
+        </script>
 </body>
-
-
-
-  <div class="container">
-    <table class="table" id="matrix">
-        
-    </table>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="add_node_modal" tabindex="-1" role="dialog" data-keyboard="false"  data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Nuevo Nodo</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1" class="modal-title">Nombre</label>
-                  <input type="email" class="form-control" id="node-label" aria-describedby="emailHelp" placeholder="Ingrese el Nombre">
-                  <small id="emailHelp" class="form-text text-muted"></small>
-                </div>
-              </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button onclick="addNode()" type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal fade" id="add_edge_modal" tabindex="-1" role="dialog" data-keyboard="false"  data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Nueva Arista</h5>
-          <button onclick="inicializarC()" type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1" class="modal-title">Peso</label>
-                  <input type="email" class="form-control" id="edge-label" aria-describedby="Ingrese el Peso" placeholder="Ingrese el Peso">
-                  <small id="emailHelp" class="form-text text-muted"></small>
-                </div>
-              </form>
-        </div>
-        <div class="modal-footer">
-          <button onclick="inicializarC()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button onclick="addEdge()" type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
 </html>
