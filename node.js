@@ -1,6 +1,7 @@
 
 var nodes, edges, network;
 var c = [];
+
 function toJSON(obj) {
   return JSON.stringify(obj, null, 4);
 }
@@ -126,6 +127,9 @@ function draw() {
 
 
   })
+  body.on('click', function(properties){
+    c = [];
+  })
 }
 function matriz (){
     var matrix = llenarMatriz(nodes.get().length);
@@ -210,5 +214,9 @@ function construirTabla(){
     tabla += "</tr> \n <tbody>";
     $('#matrix').append(tabla);
 
+}
+function inicializarC(){
+  c=[];
+  console.log("asxa");
 }
 
